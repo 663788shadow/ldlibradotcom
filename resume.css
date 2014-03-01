@@ -1,0 +1,50 @@
+body {
+}
+
+h1 {
+  font: 900 26px/13px 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  letter-spacing: -1px;
+}
+
+.header {
+  position: absolute;
+  top: 10%;
+  height: 45px;
+  width: 100%;
+  margin-top: -45px;
+}
+
+.header ul {
+  list-style: none;
+  width: 800px;
+  margin: auto;
+}
+
+.header li {
+  display: block;
+  float: left;
+  font: 13px/13px 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  padding: 20px 30px;
+  border-right: 2px solid #cfcfcf;
+}
+
+.header li:first-child {
+  padding: 0px 30px;
+}
+
+.header li:last-child {
+  border-right: none;
+}
+
+.split-section {
+
+}
+
+.split-left {
+  border-right: 2px solid #888;
+}
+
+.split-right {
+
+}
+

@@ -1,0 +1,14 @@
+body {
+  background-color: #000;
+}
+
+.wrapper {
+  margin: 10%;
+  color: #d00;
+}
+
+.main-message {
+  font-family: Baskerville, Times New Roman, Serif;
+  font-size: 2.2em;
+  text-align: center;
+}
