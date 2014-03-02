@@ -6,6 +6,17 @@
       -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
     }
 
+    .clearfix:after {
+      content: " ";
+      display: block;
+      height: 0;
+      clear: both;
+    }
+
+    html {
+      height: 100%;
+    }
+
     h1 {
       font: 900 26px/13px 'HelveticaNeue', Helvetica, Arial, sans-serif;
       /*letter-spacing: -1px;*/
@@ -21,49 +32,19 @@
       color: #bababa;
     }
 
-    .header {
-      height: 45px;
-      width: 100%;
-      clear: after;
-      margin-top: 3%;
-      margin-bottom: 3%;
-    }
-
-    .header ul {
-      list-style: none;
-      width: 800px;
-      margin: auto;
-    }
-
-    .header li {
-      display: block;
-      float: left;
-      font: 13px/13px 'HelveticaNeue', Helvetica, Arial, sans-serif;
-      padding: 20px 30px;
-      border-right: 2px solid #cfcfcf;
-    }
-
-    .header li:first-child {
-      padding: 0px 30px;
-    }
-
-    .header li:last-child {
-      border-right: none;
-    }
-
     .split-section {
       width: 800px;
       margin: auto;
-      margin-top: 2%;
+      margin-top: 1rem;
     }
 
     .split-left {
       display: inline-block;
-      float: left;
       text-align: right;
       height: 100%;
       width: 26.4%;
       padding-right: 3%;
+      vertical-align: top;
     }
 
     .split-right {
@@ -72,7 +53,27 @@
       display: inline-block;
       width: 70%;
       border-left: 2px solid #cfcfcf;
-      padding: 2%;
+      padding: 1rem;
+    }
+
+    .split-right ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .split-right li {
+      display: inline-block;
+      font: 13px/13px 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    }
+
+    .header {
+      margin-bottom: 2rem;
+    }
+
+    .header div {
+      display: inline-block;
+      width: auto;
     }
 
     .skill-display {
@@ -83,30 +84,53 @@
       display: inline-block;
       float: left;
       text-align: right;
-      width: 30%;
-      padding-right: 2%;
+      width: 165px;
+      padding-right: 1rem;
+      clear: left;
     }
 
     .level-bar {
       display: inline-block;
       background-color: #cfcfcf;
       height: 10px;
-      width: 70%;
+      width: 65%;
     }
 
     .experience-item {
       margin-bottom: 9%;
     }
+
+    @media (max-width: 800px) {
+
+      .split-section, .split-right {
+        width: 100%;
+      }
+
+      .split-left {
+        width: 100%;
+        text-align: left;
+        padding-left: 1rem;
+      }
+
+      .split-right {
+        border-left: none;
+        border-top: 2px #cfcfcf solid;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .level-bar {
+        width: 50%;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="header">
-    <ul>
-      <li><h1>L.D Libra</h1></li>
-      <li>writeme@ldlibra.com</li>
-      <li>218.821.1379</li>
-      <li>24 1st Avenue, NYC, NY 10009</li>
-    </ul>
+  <div class="split-section header">
+    <label class="split-left"><h1>L.D Libra</h1></label>
+    <div class="split-right">writeme@ldlibra.com</div>
+    <div class="split-right">218.821.1379</div>
+    <div class="split-right">24 1st Avenue, NYC, NY 10009</div>
   </div>
   <div class="split-section">
     <label class="split-left"><h2>Summary</h2></label>
@@ -115,51 +139,51 @@
   <div class="split-section">
     <label class="split-left"><h2>Skills</h2></label>
     <div id="skill-section" class="split-right">
-      <div class="skill-display">
+      <div class="skill-display clearfix">
         <label>NODE.JS</label>
         <div class="level-bar" data-level="10"></div>
       </div>
-      <div class="skill-display">
+      <div class="skill-display clearfix">
         <label>GO</label>
         <div class="level-bar" data-level="9"></div>
       </div>
-      <div class="skill-display">
+      <div class="skill-display clearfix">
         <label>UNIX/LINUX &amp; BASH</label>
         <div class="level-bar" data-level="8"></div>
       </div>
-      <div class="skill-display">
+      <div class="skill-display clearfix">
         <label>JAVASCRIPT</label>
         <div class="level-bar" data-level="8"></div>
       </div>
-      <div class="skill-display">
+      <div class="skill-display clearfix">
         <label>C/C++ (C preferred)</label>
         <div class="level-bar" data-level="7"></div>
       </div>
-      <div class="skill-display">
+      <div class="skill-display clearfix">
         <label>HTML/CSS</label>
         <div class="level-bar" data-level="6"></div>
       </div>
-      <div class="skill-display">
+      <div class="skill-display clearfix">
         <label>NOSQL</label>
         <div class="level-bar" data-level="9"></div>
       </div>
-      <div class="skill-display">
+      <div class="skill-display clearfix">
         <label>SQL (I &#9829; Postgres)</label>
         <div class="level-bar" data-level="8"></div>
       </div>
-      <div class="skill-display">
+      <div class="skill-display clearfix">
         <label>REDIS</label>
         <div class="level-bar" data-level="8"></div>
       </div>
-      <div class="skill-display">
+      <div class="skill-display clearfix">
         <label>WIDE COLUMN STORES</label>
         <div class="level-bar" data-level="6"></div>
       </div>
-      <div class="skill-display">
+      <div class="skill-display clearfix">
         <label>JAVA</label>
         <div class="level-bar" data-level="4"></div>
       </div>
-      <div class="skill-display">
+      <div class="skill-display clearfix">
         <label>SCALA</label>
         <div class="level-bar" data-level="4"></div>
       </div>
@@ -201,12 +225,28 @@
   </div>
   <script type="text/javascript">
     var skillDisplays = document.getElementById('skill-section').childNodes;
-    for (var i = 0; i < skillDisplays.length; i++) {
-      if (skillDisplays[i].tagName !== 'DIV') continue;
-      var bar = skillDisplays[i].childNodes[3];
-      var level = parseInt(bar.getAttribute('data-level'));
-      bar.style.width = (level / 10 * 70) + '%';
+    var barPercentWidth = document.documentElement.clientWidth > 540 ? 65 : 50;
+    console.log('initial value of barPercentWidth ', barPercentWidth);
+
+    function setBarWidths () {
+      console.log('ran setBarWidths');
+      for (var i = 0; i < skillDisplays.length; i++) {
+        if (skillDisplays[i].tagName !== 'DIV') continue;
+        var bar = skillDisplays[i].childNodes[3];
+        var level = parseInt(bar.getAttribute('data-level'));
+        bar.style.width = (level / 10 * barPercentWidth) + '%';
+      }
     }
+    setBarWidths();
+    window.onresize = function () {
+      console.log(document.documentElement.clientWidth);
+      if (barPercentWidth === (document.documentElement.clientWidth > 540 ? 65 : 50)) {
+        console.log('returning cuz ', barPercentWidth, ' equals ', document.documentElement.clientWidth > 540 ? 65 : 50);
+        return;
+      }
+      barPercentWidth = document.documentElement.clientWidth > 540 ? 65 : 50;
+      setBarWidths();
+    };
   </script>
 </body>
 </html>
