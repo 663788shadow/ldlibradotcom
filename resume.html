@@ -226,10 +226,8 @@
   <script type="text/javascript">
     var skillDisplays = document.getElementById('skill-section').childNodes;
     var barPercentWidth = document.documentElement.clientWidth > 540 ? 65 : 50;
-    console.log('initial value of barPercentWidth ', barPercentWidth);
 
     function setBarWidths () {
-      console.log('ran setBarWidths');
       for (var i = 0; i < skillDisplays.length; i++) {
         if (skillDisplays[i].tagName !== 'DIV') continue;
         var bar = skillDisplays[i].childNodes[3];
@@ -239,9 +237,7 @@
     }
     setBarWidths();
     window.onresize = function () {
-      console.log(document.documentElement.clientWidth);
       if (barPercentWidth === (document.documentElement.clientWidth > 540 ? 65 : 50)) {
-        console.log('returning cuz ', barPercentWidth, ' equals ', document.documentElement.clientWidth > 540 ? 65 : 50);
         return;
       }
       barPercentWidth = document.documentElement.clientWidth > 540 ? 65 : 50;
